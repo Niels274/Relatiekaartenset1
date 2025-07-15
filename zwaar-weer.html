@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zwaar weer – Koppelkaartenset</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background-color: #fdfdfd;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-button {
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .nav-button:hover {
+      background-color: #45a049;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .kaart {
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-buttons">
+    <a href="index.html" class="nav-button">Startpagina</a>
+    <a href="mooi-weer.html" class="nav-button">Mooi weer</a>
+    <a href="zwaar-weer.html" class="nav-button">Zwaar weer</a>
+  </div>
+
+  <h2>‘Zwaar weer’-route</h2>
+  <button onclick="toonKaart()">Trek een kaart</button>
+  <div id="kaart" class="kaart"></div>
+
+  <script>
+    const kaarten = [
+`Wat maakt het voor jou makkelijker om iets te zeggen als het spannend is?`,
+`Wanneer merk jij dat het beter is om even niks te zeggen?`,
+`Wat helpt jou om weer een beetje te ontspannen als we gedoe hebben gehad?`,
+`Wanneer voelt het alsof ik je niet goed begrijp?`,
+`Wat zou ik kunnen doen als jij stil wordt, zodat het niet zwaarder wordt?`,
+`Wanneer voel jij: laat maar, dit gaat nergens heen?`,
+`Wat denk jij vaak maar zeg je niet, omdat je bang bent voor gedoe?`,
+`Wat zou voor jou een fijne manier zijn om iets moeilijks te beginnen?`,
+`Wat helpt om het niet meteen op te lossen, maar gewoon even te laten zijn?`,
+`Hoe weet jij dat het ‘weer een beetje oké’ is tussen ons?`,
+`Wat maakt een moeilijk gesprek voor jou net iets makkelijker?`,
+`Hoe zou je het merken als ik écht luister?`,
+`Wanneer voelt het alsof jij het helemaal alleen moet doen?`,
+`Wat zou kunnen helpen als we allebei chagrijnig zijn?`,
+`Wat is iets kleins wat we nu wél kunnen doen, ook als het tussen ons stroef voelt?`,
+`Wat zeg ik soms goedbedoeld, maar voelt toch verkeerd bij jou?`,
+`Wanneer voel je je sneller geraakt dan je zou willen?`,
+`Wat zou je tegen me willen zeggen zonder dat het zwaar wordt?`,
+`Wat werkt beter: stilte, aanraking of iets kleins zeggen?`,
+`Hoe wil je dat ik je aankijk als het tussen ons lastig is?`
+    ];
+
+    function toonKaart() {
+      const index = Math.floor(Math.random() * kaarten.length);
+      const kaart = kaarten[index];
+      document.getElementById("kaart").innerText = kaart;
+    }
+  </script>
+</body>
+</html>

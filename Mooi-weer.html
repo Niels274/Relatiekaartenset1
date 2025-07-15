@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mooi weer – Koppelkaartenset</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background-color: #fdfdfd;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-button {
+      padding: 0.5rem 1rem;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .nav-button:hover {
+      background-color: #45a049;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .kaart {
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-buttons">
+    <a href="index.html" class="nav-button">Startpagina</a>
+    <a href="mooi-weer.html" class="nav-button">Mooi weer</a>
+    <a href="zwaar-weer.html" class="nav-button">Zwaar weer</a>
+  </div>
+
+  <h2>‘Mooi weer’-route</h2>
+  <button onclick="toonKaart()">Trek een kaart</button>
+  <div id="kaart" class="kaart"></div>
+
+  <script>
+    const kaarten = [
+`Wat is iets dat ik doe waarvan jij je gezien voelt?`,
+`Wat bespreken we steeds niet, terwijl het wel blijft hangen?`,
+`Wanneer dacht je laatst: *ja, zo voelt het goed tussen ons*?`,
+`Wat zou je wíllen bespreken, maar schuift steeds op de lange baan?`,
+`Wat zou je vaker samen met mij willen doen?`,
+`Wat gebeurt er elke keer weer als we ruzie hebben?`,
+`Waarin voel jij dat we goed op elkaar zijn afgestemd?`,
+`Wat denk je soms: dit patroon herken ik van vroeger?`,
+`Wat is iets kleins wat je nu mist, maar vroeger vanzelf ging?`,
+`Wat zou er gebeuren als we hier echt samen in zouden stappen?`,
+`Wat maakt ons als stel een goed team?`,
+`Waar verlang jij naar dat we vroeger meer hadden?`,
+`Wat gebeurt er in jou als ik zomaar iets liefs doe?`,
+`Wat hoop je dat ik zie of voel bij jou, zonder dat je het hoeft uit te leggen?`,
+`Wat zou je me vaker willen zeggen, maar schiet er vaak bij in?`,
+`Wat gebeurt er in jou als we allebei druk zijn en elkaar even kwijtraken?`,
+`Wat maakt jou blij als je aan mij denkt?`,
+`Wanneer voelde je je alleen terwijl we wél samen waren?`,
+`Welke fijne herinnering aan ons komt nu in je op?`,
+`Waar zou je over 3 maanden willen staan samen?`
+    ];
+
+    function toonKaart() {
+      const index = Math.floor(Math.random() * kaarten.length);
+      const kaart = kaarten[index];
+      document.getElementById("kaart").innerText = kaart;
+    }
+  </script>
+</body>
+</html>

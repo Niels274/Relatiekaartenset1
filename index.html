@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koppelkaartenset</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fdfdfd;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    .route-button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .route-button:hover {
+      background-color: #45a049;
+    }
+
+    @media (min-width: 600px) {
+      .button-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Koppelkaartenset</h1>
+
+  <p>Hier vind je twee sets met verdiepende en verbindende vragen om met je partner te bespreken.</p>
+  <p>Ik heb er een 'mooi weer'-route van gemaakt en een 'zwaar weer'-route.</p>
+  <p>Kies voor <strong>'mooi weer'</strong> als je vragen wilt die jullie helpen verder bouwen op de verbinding die er al is.<br>
+  Kies voor <strong>'zwaar weer'</strong> als jullie sneller getriggerd raken en het de laatste tijd niet zo makkelijk is.</p>
+  <p>Veel plezier!</p>
+
+  <div class="button-group">
+    <a class="route-button" href="mooi-weer.html">‘Mooi weer’-route</a>
+    <a class="route-button" href="zwaar-weer.html">‘Zwaar weer’-route</a>
+  </div>
+
+</body>
+</html>
