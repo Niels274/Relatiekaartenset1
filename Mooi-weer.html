@@ -2,66 +2,16 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mooi weer – Koppelkaartenset</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
-      background-color: #fdfdfd;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-button {
-      padding: 0.5rem 1rem;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .nav-button:hover {
-      background-color: #45a049;
-    }
-
-    button {
-      padding: 0.6rem 1.2rem;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      cursor: pointer;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .kaart {
-      white-space: pre-wrap;
-      line-height: 1.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mooi Weer Kaartenset</title>
+  <link rel="stylesheet" href="stijl.css" />
 </head>
 <body>
 
-  <div class="nav-buttons">
-    <a href="index.html" class="nav-button">Startpagina</a>
-    <a href="mooi-weer.html" class="nav-button">Mooi weer</a>
-    <a href="zwaar-weer.html" class="nav-button">Zwaar weer</a>
-  </div>
-
-  <h2>‘Mooi weer’-route</h2>
-  <button onclick="toonKaart()">Trek een kaart</button>
-  <div id="kaart" class="kaart"></div>
+  <button class="button" id="trekKaartBtn">Trek een kaart</button>
+  <section id="kaart" class="card">
+    <p>Klik op de knop om een reflectiekaart te trekken.</p>
+  </section>
 
   <script>
     const kaarten = [
@@ -85,13 +35,15 @@
 `Wanneer voelde je je alleen terwijl we wél samen waren?`,
 `Welke fijne herinnering aan ons komt nu in je op?`,
 `Waar zou je over 3 maanden willen staan samen?`
+
+      // Voeg hier de rest van de volledige teksten toe zoals in je origineel
     ];
 
-    function toonKaart() {
+    document.getElementById('trekKaartBtn').addEventListener('click', () => {
       const index = Math.floor(Math.random() * kaarten.length);
-      const kaart = kaarten[index];
-      document.getElementById("kaart").innerText = kaart;
-    }
+      document.getElementById('kaart').innerText = kaarten[index];
+    });
   </script>
+
 </body>
 </html>
