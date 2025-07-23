@@ -5,12 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kaartenset Start</title>
   <link rel="stylesheet" href="stijl.css" />
+  <style>
+    /* Extra styling voor links als knoppen */
+    .btn {
+      display: block;
+      width: 250px;
+      margin: 1.5rem auto;
+      padding: 1rem 2rem;
+      background-color: #008296;
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,130,150,0.4);
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #006d75;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 650px;
+      margin: 3rem auto;
+      padding: 1rem 2rem;
+      background-color: #fdfdfd;
+      color: #222;
+      text-align: center;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #005963;
+      margin-bottom: 3rem;
+    }
+  </style>
 </head>
 <body>
   <h1>Welkom bij de kaartensets</h1>
 
-  <a href="mooi-weer.html" class="route-button">Mooi weer – Verdiepende vragen</a>
-  <a href="zwaar-weer.html" class="route-button">Zwaar weer – Vragen voor rust en contact</a>
+  <a href="mooi-weer.html" class="btn">Mooi weer</a>
+  <a href="zwaar-weer.html" class="btn">Zwaar weer</a>
 
 </body>
 </html>
