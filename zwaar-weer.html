@@ -37,11 +37,26 @@
 `Hoe wil je dat ik je aankijk als het tussen ons lastig is?`
     ];
 
-    document.getElementById('trekKaartBtn').addEventListener('click', () => {
-      const index = Math.floor(Math.random() * kaarten.length);
-      document.getElementById('kaart').innerText = kaarten[index];
-    });
-  </script>
+   // Array om de laatste drie getrokken indexen te onthouden
+  const laatsteIndices = [];
+
+  function toonKaart() {
+    let index;
+
+    do {
+      index = Math.floor(Math.random() * kaarten.length);
+    } while (laatsteIndices.includes(index) && kaarten.length > laatsteIndices.length);
+
+    // Voeg de nieuwe index toe aan de lijst en houd deze maximaal 3 lang
+    laatsteIndices.push(index);
+    if (laatsteIndices.length > 3) {
+      laatsteIndices.shift(); // verwijder oudste index
+    }
+
+    const kaart = kaarten[index];
+    document.getElementById('kaart').innerText = kaart;
+  }
+</script>
 
 </body>
 </html>
